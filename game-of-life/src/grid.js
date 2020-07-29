@@ -1,46 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
+//used immer package to help with immutable state https://immerjs.github.io/immer/docs/introduction
 import produce from "immer";
 
-const numRows = 35;
-const numCols = 35;
-
-const Grid = () => {
-  const [grid, setGrid] = useState(() => {
-    const rows = [];
-    for (let i = 0; i < numRows; i++) {
-      //initialize values with zeros
-      rows.push(Array.from(Array(numCols), () => 0));
-    }
-    return rows;
-  });
-  console.log(grid);
+const Grid = ({ grid, setGrid, numCols, numRows }) => {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: `repeat(${numCols}, 20px)`,
-      }}
-    >
-      {grid.map((rows, index) =>
-        rows.map((col, idx) => (
-          <div
-            key={`${index}-${idx}`}
-            onClick={() => {
-              const newGrid = produce(grid, (gridCopy) => {
-                gridCopy[index][idx] = grid[index][idx] ? 0 : 1;
-              });
-              setGrid(newGrid);
-            }}
-            style={{
-              width: 20,
-              height: 20,
-              background: grid[index][idx] ? "pink" : undefined,
-              border: "solid 1px black",
-            }}
-          />
-        ))
-      )}
-    </div>
+    <>
+      <div
+        className="grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: `repeat(${numCols}, 20px)`,
+        }}
+      >
+        {grid.map((rows, index) =>
+          rows.map((col, idx) => (
+            <div
+              key={`${index}-${idx}`}
+              onClick={() => {
+                const newGrid = produce(grid, (gridCopy) => {
+                  gridCopy[index][idx] = grid[index][idx] ? 0 : 1;
+                });
+                setGrid(newGrid);
+              }}
+              style={{
+                width: 16,
+                height: 16,
+                background: grid[index][idx] ? "#a2272d" : undefined,
+                border: "solid 1px white",
+              }}
+            />
+          ))
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Ozone";
+  src: url("./Ozone.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-image: url("ligh.jpg");
+}
+html {
+  font-size: 62.5%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --black: #0d0d0d;
+  --red: #ff2d2b;
+}
 .App {
   text-align: center;
 }
@@ -27,12 +51,80 @@
 .App-link {
   color: #61dafb;
 }
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #414141;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+button:hover,
+button:focus {
+  background: #a2272d;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+.bottomRow {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  height: 20rem;
+}
+.buttons {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+}
+.playButton,
+.clearButton {
+  margin: 1rem;
+  border-radius: 4px;
+}
+h1,
+ul {
+  margin-top: 1%;
+  color: aliceblue;
+}
+
+h2 {
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+.grid {
+  margin-top: 3%;
+  margin-left: 5%;
+}
+.components {
+  display: flex;
+  justify-content: space-around;
+}
+.preset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2%;
+  color: white;
+}
+.rules {
+  margin-top: 5%;
+  margin-right: 20%;
 }
