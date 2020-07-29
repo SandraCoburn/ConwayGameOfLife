@@ -31,21 +31,20 @@ const generateEmptyGrid = () => {
 };
 
 function App() {
+  const [gen, setGen] = useState(0);
   const [grid, setGrid] = useState(() => {
     return generateEmptyGrid();
   });
-  //console.log(grid);
-  const [running, setRunning] = useState(false);
 
-  //Generate random
-  const generateRandom = () => {
-    const rows = [];
-    for (let i = 0; i < numRows; i++) {
-      rows.push(
-        Array.from(Array(numCols), () => (Math.random() > 0.5 ? 1 : 0))
-      );
+  const [running, setRunning] = useState(false);
+  const changeColor = (cell, generation) => {
+    if (cell && generation % 3 === 0) {
+      return "orange";
+    } else if (cell) {
+      return "#a2272d";
+    } else {
+      return undefined;
     }
-    setGrid(rows);
   };
 
   //if running values changes but runSimulation doesn't, it won't update value. Use ref to fix
@@ -81,8 +80,26 @@ function App() {
         }
       });
     });
+    setGen((prevGen) => {
+      return prevGen + 1;
+    });
     setTimeout(runSimulation, 500);
   }, []);
+
+  //Generate random
+  const generateRandom = () => {
+    const rows = [];
+    for (let i = 0; i < numRows; i++) {
+      rows.push(
+        Array.from(Array(numCols), () => (Math.random() > 0.6 ? 1 : 0))
+      );
+    }
+
+    setGrid(rows);
+    setGen((prevGen) => {
+      return prevGen + 1;
+    });
+  };
 
   return (
     <div className="App">
@@ -93,6 +110,8 @@ function App() {
           setGrid={setGrid}
           numCols={numCols}
           numRows={numRows}
+          changeColor={changeColor}
+          gen={gen}
         />
         <Preset
           running={running}
@@ -102,6 +121,8 @@ function App() {
           generateEmptyGrid={generateEmptyGrid}
           setGrid={setGrid}
           generateRandom={generateRandom}
+          setGen={setGen}
+          gen={gen}
         />
         <Rules />
       </section>

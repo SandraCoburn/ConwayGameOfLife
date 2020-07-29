@@ -2,7 +2,7 @@ import React from "react";
 const Rules = () => {
   return (
     <div className="rules">
-      <h1>Rules:</h1>
+      <h1>Game of Life:</h1>
       <p>
         The universe of the Game of Life is an infinite, two-dimensional
         orthogonal grid of square cells, each of which is in one of two possible

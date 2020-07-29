@@ -2,7 +2,7 @@ import React from "react";
 //used immer package to help with immutable state https://immerjs.github.io/immer/docs/introduction
 import produce from "immer";
 
-const Grid = ({ grid, setGrid, numCols, numRows }) => {
+const Grid = ({ grid, setGrid, numCols, changeColor, gen }) => {
   return (
     <>
       <div
@@ -25,7 +25,8 @@ const Grid = ({ grid, setGrid, numCols, numRows }) => {
               style={{
                 width: 16,
                 height: 16,
-                background: grid[index][idx] ? "#a2272d" : undefined,
+                //background: grid[index][idx] ? "#a2272d" : undefined,
+                background: changeColor(grid[index][idx], gen),
                 border: "solid 1px white",
               }}
             />

@@ -8,10 +8,12 @@ const Preset = ({
   generateEmptyGrid,
   setGrid,
   generateRandom,
+  setGen,
+  gen,
 }) => {
   return (
     <div className="preset">
-      <h2>Generation: #</h2>
+      <h2>Generation: #{gen}</h2>
       <button onClick={() => generateRandom()}>Random</button>
       <button>Preset 2</button>
       <button>Preset 3</button>
@@ -30,6 +32,7 @@ const Preset = ({
       <button
         className="playButton"
         onClick={() => {
+          //   setGen(0);
           setGrid(generateEmptyGrid());
         }}
       >
