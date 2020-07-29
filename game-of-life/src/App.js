@@ -1,10 +1,11 @@
 import React, { useCallback, useState, useRef } from "react";
-
+import produce from "immer";
 import Grid from "./grid";
 import Rules from "./Rules";
-import Preset from "./Preset";
+import PresetButtons from "./PresetButtons";
+import Header from "./Header";
+
 import "./App.css";
-import produce from "immer";
 
 const numRows = 40;
 const numCols = 40;
@@ -101,9 +102,24 @@ function App() {
     });
   };
 
+  // const gliderGun = () => {
+  //     const rows = [];
+  //     for (let i = 0; i < numRows; i++) {
+  //       rows.push(
+  //         Array.from(Array(numCols), () => )
+  //       );
+  //     }
+
+  //     setGrid(rows);
+  //     setGen((prevGen) => {
+  //       return prevGen + 1;
+  //     });
+  // }
+
   return (
     <div className="App">
-      <h1>Conway's Game of Life</h1>
+      <Header />
+
       <section className="components">
         <Grid
           grid={grid}
@@ -112,8 +128,9 @@ function App() {
           numRows={numRows}
           changeColor={changeColor}
           gen={gen}
+          running={running}
         />
-        <Preset
+        <PresetButtons
           running={running}
           setRunning={setRunning}
           runSimulation={runSimulation}

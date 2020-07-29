@@ -2,31 +2,14 @@ import React from "react";
 const Rules = () => {
   return (
     <div className="rules">
-      <h1>Game of Life:</h1>
-      <p>
-        The universe of the Game of Life is an infinite, two-dimensional
-        orthogonal grid of square cells, each of which is in one of two possible
-        states, live or dead, (or populated and unpopulated, respectively).
-        Every cell interacts with its eight neighbours, which are the cells that
-        are horizontally, vertically, or diagonally adjacent. At each step in
-        time, the following transitions occur:
-      </p>
+      <h1>Rules:</h1>
+
       <ul>
+        <li>A living cell will stay alive if 2 or 3 neighbours are alive.</li>
+        <li>A dead cell will come alive if exactly 3 neighbours are living.</li>
         <li>
-          Any live cell with fewer than two live neighbours dies, as if by
-          underpopulation.
-        </li>
-        <li>
-          Any live cell with two or three live neighbours lives on to the next
-          generation.
-        </li>
-        <li>
-          Any live cell with more than three live neighbours dies, as if by
-          overpopulation
-        </li>
-        <li>
-          Any dead cell with exactly three live neighbours becomes a live cell,
-          as if by reproduction.
+          Cells with less than 2 neighbours will die of underpopulation, cells
+          with 4 or more neighbours will die of overpopulation.
         </li>
         <li>
           All other live cells die in the next generation. Similarly, all other
@@ -34,14 +17,17 @@ const Rules = () => {
         </li>
       </ul>
       <br></br>
-      <p>
-        The initial pattern constitutes the seed of the system. The first
-        generation is created by applying the above rules simultaneously to
-        every cell in the seed; births and deaths occur simultaneously, and the
-        discrete moment at which this happens is sometimes called a tick. Each
-        generation is a pure function of the preceding one. The rules continue
-        to be applied repeatedly to create further generations.
-      </p>
+      <ul>
+        <li>
+          Player can use the Random button to generate random number of live
+          cells onto the grid.
+        </li>
+        <li>
+          Player can use the Start/Stop button to initiate or stop a
+          simmulation.
+        </li>
+        <li>Player can clear the previous grid with the Clear button.</li>
+      </ul>
     </div>
   );
 };

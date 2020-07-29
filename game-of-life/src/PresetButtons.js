@@ -1,6 +1,6 @@
 import React from "react";
 
-const Preset = ({
+const PresetButtons = ({
   running,
   setRunning,
   runSimulation,
@@ -32,7 +32,7 @@ const Preset = ({
       <button
         className="playButton"
         onClick={() => {
-          //   setGen(0);
+          setGen(0);
           setGrid(generateEmptyGrid());
         }}
       >
@@ -41,4 +41,4 @@ const Preset = ({
     </div>
   );
 };
-export default Preset;
+export default PresetButtons;

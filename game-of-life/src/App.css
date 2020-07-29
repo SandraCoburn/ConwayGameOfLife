@@ -49,8 +49,12 @@ code {
   color: white;
 }
 
-.App-link {
+a {
   color: #61dafb;
+  font-size: 2rem;
+}
+a:hover {
+  color: #a2272d;
 }
 button {
   display: inline-block;
@@ -111,7 +115,7 @@ h2 {
 }
 
 .grid {
-  margin-top: 3%;
+  margin-top: 1%;
   margin-left: 5%;
   box-shadow: 0px 0px 20px #a2272d;
 }
