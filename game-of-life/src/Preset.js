@@ -1,10 +1,18 @@
 import React from "react";
 
-const Preset = ({ running, setRunning, runSimulation, runningRef }) => {
+const Preset = ({
+  running,
+  setRunning,
+  runSimulation,
+  runningRef,
+  generateEmptyGrid,
+  setGrid,
+  generateRandom,
+}) => {
   return (
     <div className="preset">
       <h2>Generation: #</h2>
-      <button>Preset 1</button>
+      <button onClick={() => generateRandom()}>Random</button>
       <button>Preset 2</button>
       <button>Preset 3</button>
       <button
@@ -19,7 +27,14 @@ const Preset = ({ running, setRunning, runSimulation, runningRef }) => {
       >
         {running ? "Stop" : "Start"}
       </button>
-      <button className="playButton">Clear</button>
+      <button
+        className="playButton"
+        onClick={() => {
+          setGrid(generateEmptyGrid());
+        }}
+      >
+        Clear
+      </button>
     </div>
   );
 };

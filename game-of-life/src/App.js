@@ -20,17 +20,33 @@ const operations = [
   [-1, 0],
 ];
 
+//Clear the grid
+const generateEmptyGrid = () => {
+  const rows = [];
+  for (let i = 0; i < numRows; i++) {
+    //initialize values with zeros
+    rows.push(Array.from(Array(numCols), () => 0));
+  }
+  return rows;
+};
+
 function App() {
   const [grid, setGrid] = useState(() => {
-    const rows = [];
-    for (let i = 0; i < numRows; i++) {
-      //initialize values with zeros
-      rows.push(Array.from(Array(numCols), () => 0));
-    }
-    return rows;
+    return generateEmptyGrid();
   });
   //console.log(grid);
   const [running, setRunning] = useState(false);
+
+  //Generate random
+  const generateRandom = () => {
+    const rows = [];
+    for (let i = 0; i < numRows; i++) {
+      rows.push(
+        Array.from(Array(numCols), () => (Math.random() > 0.5 ? 1 : 0))
+      );
+    }
+    setGrid(rows);
+  };
 
   //if running values changes but runSimulation doesn't, it won't update value. Use ref to fix
   const runningRef = useRef(running);
@@ -65,7 +81,7 @@ function App() {
         }
       });
     });
-    setTimeout(runSimulation, 1000);
+    setTimeout(runSimulation, 500);
   }, []);
 
   return (
@@ -83,6 +99,9 @@ function App() {
           setRunning={setRunning}
           runSimulation={runSimulation}
           runningRef={runningRef}
+          generateEmptyGrid={generateEmptyGrid}
+          setGrid={setGrid}
+          generateRandom={generateRandom}
         />
         <Rules />
       </section>

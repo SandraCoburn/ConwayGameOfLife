@@ -8,10 +8,11 @@
 * {
   margin: 0;
   padding: 0;
-  background-image: url("ligh.jpg");
+  background-image: url("starts.jpg");
 }
 html {
   font-size: 62.5%;
+  color: white;
 }
 
 code {
@@ -126,5 +127,8 @@ h2 {
 }
 .rules {
   margin-top: 5%;
-  margin-right: 20%;
+  margin-right: 5%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
 }
