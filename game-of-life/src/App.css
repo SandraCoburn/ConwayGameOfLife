@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Ozone";
+  src: url("./Ozone.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-image: url("starts.jpg");
+}
+html {
+  font-size: 62.5%;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --black: #0d0d0d;
+  --red: #ff2d2b;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a {
+  color: #61dafb;
+  font-size: 2rem;
+}
+a:hover {
+  color: #a2272d;
+}
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #414141;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+button:hover,
+button:focus {
+  background: #a2272d;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+.bottomRow {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  height: 20rem;
+}
+.buttons {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+}
+.playButton,
+.clearButton {
+  margin: 1rem;
+  border-radius: 4px;
+}
+h1,
+ul {
+  margin-top: 1%;
+  color: aliceblue;
+}
+
+h2 {
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+.grid {
+  margin-top: 1%;
+  margin-left: 5%;
+  box-shadow: 0px 0px 20px #a2272d;
+}
+.components {
+  display: flex;
+  justify-content: space-around;
+}
+.preset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2%;
+  color: white;
+}
+.rules {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.6rem;
+}
+.rules2 {
+  margin-top: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
+}
