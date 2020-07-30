@@ -1,7 +1,7 @@
 import React from "react";
 const Rules = () => {
   return (
-    <div className="rules">
+    <div className="rules2">
       <h1>Rules:</h1>
 
       <ul>
@@ -19,14 +19,23 @@ const Rules = () => {
       <br></br>
       <ul>
         <li>
-          Player can use the Random button to generate random number of live
+          Player can use the click on any cell to make a custom pattern then
+          click on the "Start" button to initiate a simulation. Click on Stop to
+          pause.
+        </li>
+        <li>
+          Player can use the "Random" button to generate a random number of live
           cells onto the grid.
         </li>
         <li>
-          Player can use the Start/Stop button to initiate or stop a
+          Player can use the "Start/Stop" button to initiate or stop a
           simmulation.
         </li>
-        <li>Player can clear the previous grid with the Clear button.</li>
+        <li>Player can clear the previous grid with the "Clear" button.</li>
+        <li>
+          Player can see one generation at a time by clicking on the "Next
+          Generation" button.
+        </li>
       </ul>
     </div>
   );

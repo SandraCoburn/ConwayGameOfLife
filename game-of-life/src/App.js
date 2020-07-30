@@ -39,8 +39,8 @@ function App() {
 
   const [running, setRunning] = useState(false);
   const changeColor = (cell, generation) => {
-    if (cell && generation % 3 === 0) {
-      return "orange";
+    if (cell && generation % 5 === 0) {
+      return "teal";
     } else if (cell) {
       return "#a2272d";
     } else {
@@ -95,7 +95,6 @@ function App() {
         Array.from(Array(numCols), () => (Math.random() > 0.6 ? 1 : 0))
       );
     }
-
     setGrid(rows);
     setGen((prevGen) => {
       return prevGen + 1;
@@ -115,6 +114,34 @@ function App() {
   //       return prevGen + 1;
   //     });
   // }
+  const manualSimulation = () => {
+    setGrid((g) => {
+      return produce(g, (gridCopy) => {
+        for (let i = 0; i < numRows; i++) {
+          for (let j = 0; j < numCols; j++) {
+            let neighbors = 0;
+            operations.forEach(([x, y]) => {
+              const newI = i + x;
+              const newJ = j + y;
+              //Check we are not out of boundaries
+              if (newI >= 0 && newI < numRows && newJ >= 0 && newJ < numCols) {
+                neighbors += g[newI][newJ];
+              }
+            });
+            //This covers the underpopulated cell rule
+            if (neighbors < 2 || neighbors > 3) {
+              gridCopy[i][j] = 0;
+            } else if (g[i][j] === 0 && neighbors === 3) {
+              gridCopy[i][j] = 1;
+            }
+          }
+        }
+      });
+    });
+    setGen((prevGen) => {
+      return prevGen + 1;
+    });
+  };
 
   return (
     <div className="App">
@@ -140,6 +167,7 @@ function App() {
           generateRandom={generateRandom}
           setGen={setGen}
           gen={gen}
+          manualSimulation={manualSimulation}
         />
         <Rules />
       </section>

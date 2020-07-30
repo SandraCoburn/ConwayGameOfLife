@@ -132,8 +132,16 @@ h2 {
 }
 .rules {
   margin-top: 5%;
+  margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+}
+.rules2 {
+  margin-top: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.5rem;
 }

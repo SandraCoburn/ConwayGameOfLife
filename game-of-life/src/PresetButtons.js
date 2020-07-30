@@ -10,13 +10,14 @@ const PresetButtons = ({
   generateRandom,
   setGen,
   gen,
+  manualSimulation,
 }) => {
   return (
     <div className="preset">
       <h2>Generation: #{gen}</h2>
       <button onClick={() => generateRandom()}>Random</button>
       <button>Preset 2</button>
-      <button>Preset 3</button>
+      <button onClick={() => manualSimulation()}>Next Generation</button>
       <button
         className="playButton"
         onClick={() => {
