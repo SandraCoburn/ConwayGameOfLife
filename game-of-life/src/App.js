@@ -1,52 +1,21 @@
 import React, { useCallback, useState, useRef } from "react";
+import { Link, Route } from "react-router-dom";
 import produce from "immer";
-import Grid from "./grid";
-import Rules from "./Rules";
-import PresetButtons from "./PresetButtons";
-import Header from "./Header";
+import Home from "./Home";
+import About from "./about";
+import { generateEmptyGrid, operations } from "./GameGrid.util";
 
 import "./App.css";
 
 const numRows = 40;
 const numCols = 40;
 
-const operations = [
-  [0, 1],
-  [0, -1],
-  [1, -1],
-  [-1, 1],
-  [1, 1],
-  [-1, -1],
-  [1, 0],
-  [-1, 0],
-];
-
-//Clear the grid
-const generateEmptyGrid = () => {
-  const rows = [];
-  for (let i = 0; i < numRows; i++) {
-    //initialize values with zeros
-    rows.push(Array.from(Array(numCols), () => 0));
-  }
-  return rows;
-};
-
 function App() {
+  const [running, setRunning] = useState(false);
   const [gen, setGen] = useState(0);
   const [grid, setGrid] = useState(() => {
     return generateEmptyGrid();
   });
-
-  const [running, setRunning] = useState(false);
-  const changeColor = (cell, generation) => {
-    if (cell && generation % 5 === 0) {
-      return "teal";
-    } else if (cell) {
-      return "#a2272d";
-    } else {
-      return undefined;
-    }
-  };
 
   //if running values changes but runSimulation doesn't, it won't update value. Use ref to fix
   const runningRef = useRef(running);
@@ -56,7 +25,6 @@ function App() {
     if (!runningRef.current) {
       return;
     }
-
     //simulation
     setGrid((g) => {
       return produce(g, (gridCopy) => {
@@ -87,33 +55,6 @@ function App() {
     setTimeout(runSimulation, 500);
   }, []);
 
-  //Generate random
-  const generateRandom = () => {
-    const rows = [];
-    for (let i = 0; i < numRows; i++) {
-      rows.push(
-        Array.from(Array(numCols), () => (Math.random() > 0.6 ? 1 : 0))
-      );
-    }
-    setGrid(rows);
-    setGen((prevGen) => {
-      return prevGen + 1;
-    });
-  };
-
-  // const gliderGun = () => {
-  //     const rows = [];
-  //     for (let i = 0; i < numRows; i++) {
-  //       rows.push(
-  //         Array.from(Array(numCols), () => )
-  //       );
-  //     }
-
-  //     setGrid(rows);
-  //     setGen((prevGen) => {
-  //       return prevGen + 1;
-  //     });
-  // }
   const manualSimulation = () => {
     setGrid((g) => {
       return produce(g, (gridCopy) => {
@@ -145,32 +86,32 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-
-      <section className="components">
-        <Grid
+      <nav>
+        <div className="nav-links">
+          <Link exact to="/">
+            Conway's Game of Life
+          </Link>
+          <Link to="/about">About</Link>
+        </div>
+      </nav>
+      <div>
+        <Route exact path="/about" component={About} />
+      </div>
+      <Route exact path="/">
+        <Home
           grid={grid}
+          setGen={setGen}
           setGrid={setGrid}
           numCols={numCols}
           numRows={numRows}
-          changeColor={changeColor}
           gen={gen}
-          running={running}
-        />
-        <PresetButtons
           running={running}
           setRunning={setRunning}
-          runSimulation={runSimulation}
-          runningRef={runningRef}
-          generateEmptyGrid={generateEmptyGrid}
-          setGrid={setGrid}
-          generateRandom={generateRandom}
-          setGen={setGen}
-          gen={gen}
           manualSimulation={manualSimulation}
+          runningRef={runningRef}
+          runSimulation={runSimulation}
         />
-        <Rules />
-      </section>
+      </Route>
     </div>
   );
 }

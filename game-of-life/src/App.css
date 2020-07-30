@@ -49,13 +49,6 @@ code {
   color: white;
 }
 
-a {
-  color: #61dafb;
-  font-size: 2rem;
-}
-a:hover {
-  color: #a2272d;
-}
 button {
   display: inline-block;
   border: none;
@@ -74,7 +67,7 @@ button {
 }
 button:hover,
 button:focus {
-  background: #a2272d;
+  background: #b73239;
 }
 
 button:focus {
@@ -117,7 +110,7 @@ h2 {
 .grid {
   margin-top: 1%;
   margin-left: 5%;
-  box-shadow: 0px 0px 20px #a2272d;
+  box-shadow: 0px 0px 20px #b73239;
 }
 .components {
   display: flex;
@@ -144,4 +137,35 @@ h2 {
   text-align: justify;
   text-justify: inter-word;
   font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  margin-top: 32px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #61dafb;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 20%;
+}
+.nav-links a:last-of-type {
+  margin-right: 0;
+}
+
+a:hover {
+  color: #a2272d;
+}
+a:active {
+  color: #b73239;
 }
