@@ -12,9 +12,6 @@ const blinker = [
   { row: 20, col: 1 },
   { row: 20, col: 2 },
   { row: 20, col: 3 },
-  { row: 30, col: 15 },
-  { row: 30, col: 16 },
-  { row: 30, col: 17 },
 
   { row: 5, col: 18 },
   { row: 6, col: 18 },

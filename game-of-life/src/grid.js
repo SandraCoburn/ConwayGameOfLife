@@ -10,7 +10,7 @@ const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
         className="grid"
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(${numCols}, 18px)`,
+          gridTemplateColumns: `repeat(${numCols}, 16px)`,
         }}
       >
         {grid.map((rows, index) =>
