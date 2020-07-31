@@ -3,12 +3,14 @@ import { Link, Route } from "react-router-dom";
 import produce from "immer";
 import Home from "./Home";
 import About from "./about";
-import { generateEmptyGrid, operations } from "./GameGrid.util";
+import {
+  generateEmptyGrid,
+  operations,
+  numCols,
+  numRows,
+} from "./GameGrid.util";
 
 import "./App.css";
-
-const numRows = 40;
-const numCols = 40;
 
 function App() {
   const [running, setRunning] = useState(false);

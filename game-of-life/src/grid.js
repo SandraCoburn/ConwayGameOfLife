@@ -3,14 +3,14 @@ import React from "react";
 import produce from "immer";
 import { changeColor } from "./GameGrid.util";
 
-const Grid = ({ grid, setGrid, numCols, gen, running }) => {
+const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
   return (
     <>
       <div
         className="grid"
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(${numCols}, 20px)`,
+          gridTemplateColumns: `repeat(${numCols}, 18px)`,
         }}
       >
         {grid.map((rows, index) =>

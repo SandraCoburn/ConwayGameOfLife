@@ -6,9 +6,10 @@
 }
 
 * {
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url("starts.jpg");
 }
 html {
   font-size: 62.5%;
@@ -32,12 +33,6 @@ code {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -54,6 +49,7 @@ button {
   border: none;
   padding: 1rem 2rem;
   margin: 0;
+  border-radius: 4px;
   text-decoration: none;
   background: #414141;
   color: #ffffff;
@@ -93,7 +89,6 @@ button:active {
 .playButton,
 .clearButton {
   margin: 1rem;
-  border-radius: 4px;
 }
 h1,
 ul {
@@ -115,6 +110,7 @@ h2 {
 .components {
   display: flex;
   justify-content: space-around;
+  margin-left: 5%;
 }
 .preset {
   display: flex;
@@ -168,4 +164,104 @@ a:hover {
 }
 a:active {
   color: #b73239;
+}
+
+@media (max-width: 800px) {
+  .components {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    justify-content: center;
+  }
+  h2 {
+    float: left;
+    margin-left: 5%;
+    font-size: 1.3rem;
+  }
+  .preset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+    color: white;
+    margin-right: 5%;
+  }
+  .buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    display: flex;
+    size: 10%;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  .playButton,
+  .clearButton {
+    margin: 1rem;
+    border-radius: 4px;
+  }
+  .grid {
+    margin-top: 5%;
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 14%;
+  }
+  .rules2 {
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .components {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 1%;
+  }
+  .preset {
+    display: flex;
+    flex-direction: row;
+    margin-left: 14%;
+    color: white;
+  }
+  .buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    display: flex;
+    font-size: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  .playButton,
+  .clearButton {
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  .grid {
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .rules2 {
+    margin-top: 1%;
+    margin-left: 5%;
+    text-align: justify;
+    font-size: 1rem;
+  }
+  h2 {
+    float: left;
+    margin-left: 1%;
+    font-size: 1rem;
+  }
 }

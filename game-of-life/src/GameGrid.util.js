@@ -1,7 +1,7 @@
 import produce from "immer";
 // import { generateEmptyGrid } from "./App";
-const numRows = 40;
-const numCols = 40;
+export const numRows = 30;
+export const numCols = 30;
 
 export const operations = [
   [0, 1],
