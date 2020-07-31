@@ -40,6 +40,13 @@ const Rules = () => {
           "Preset" button has a cell pattern that Player can activate and see
           how the patterns change but never die.
         </li>
+        <li>
+          Player can click on "Simkin glider gun" button to star a preset patter
+          (In 2015, a gun called the "Simkin glider gun", which releases a
+          glider every 120th generation, was discovered that has fewer live
+          cells but which is spread out across a larger bounding box at its
+          extremities.).
+        </li>
       </ul>
     </div>
   );

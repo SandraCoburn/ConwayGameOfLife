@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="rules">
-      <h1>Origins and Rules:</h1>
+      <h1>*Origins and Rules:</h1>
       <p>
         Motivated by questions in mathematical logic and in part by work on
         simulation games, John Conway began doing experiments in 1968 with a
@@ -81,6 +81,16 @@ const About = () => {
         generation is a pure function of the preceding one. The rules continue
         to be applied repeatedly to create further generations.
       </p>
+      <p>
+        It is possible to build a pattern that acts like a finite-state machine
+        connected to two counters. This has the same computational power as a
+        universal Turing machine, so the Game of Life is theoretically as
+        powerful as any computer with unlimited memory and no time constraints;
+        it is Turing complete. In fact, several different programmable computer
+        architectures have been implemented in the Game of Life, including a
+        pattern that simulates Tetris.
+      </p>
+      <p>*All imformation in this page was taken from wikipedia.</p>
     </div>
   );
 };

@@ -92,7 +92,7 @@ export const changeColor = (cell, generation) => {
   } else if (cell) {
     return "#a2272d";
   } else if (generation > 10) {
-    return "green";
+    return "orange";
   } else {
     return undefined;
   }

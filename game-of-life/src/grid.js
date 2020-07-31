@@ -19,7 +19,7 @@ const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
               key={`${index}-${idx}`}
               onClick={(e) => {
                 if (!running) {
-                  console.log("i clicked", index, idx);
+                  //console.log("i clicked", index, idx);
                   const newGrid = produce(grid, (gridCopy) => {
                     gridCopy[index][idx] = grid[index][idx] ? 0 : 1;
                   });
