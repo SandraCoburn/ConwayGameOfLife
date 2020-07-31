@@ -35,7 +35,7 @@ const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
                 //background: grid[index][idx] ? "#a2272d" : undefined,
                 background: changeColor(grid[index][idx], gen),
                 borderTop: "1px solid #dfdfdf",
-                borderLeft: "1px solid #dfdfdf",
+                borderLeft: "1px solid gray",
                 gridGap: "0px",
               }}
             />
