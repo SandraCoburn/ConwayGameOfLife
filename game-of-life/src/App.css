@@ -28,26 +28,10 @@ code {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 button {
   display: inline-block;
   border: none;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1%;
   border-radius: 4px;
   text-decoration: none;
@@ -60,6 +44,7 @@ button {
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  box-shadow: 0px 0px 20px #b73239;
 }
 button:hover,
 button:focus {
@@ -89,6 +74,7 @@ button:active {
 .playButton,
 .clearButton {
   margin: 1rem;
+  padding: 1rem;
 }
 h1,
 ul {
@@ -98,26 +84,32 @@ ul {
 
 h2 {
   float: left;
-  margin-left: 10%;
+  margin-left: 1%;
   margin-bottom: 20px;
+  border: solid 1px rgb(49, 46, 46);
+  padding: 2%;
+  font-size: 1rem;
+  box-shadow: 0px 0px 20px #b73239;
 }
 
 .grid {
   margin-top: 1%;
-  margin-left: 5%;
+  margin-left: 3%;
   box-shadow: 0px 0px 20px #b73239;
 }
 .components {
   display: flex;
   justify-content: space-around;
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 1%;
+  padding: 3%;
 }
 .preset {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 2%;
+  margin-left: 2%;
   color: white;
 }
 .rules {
@@ -126,22 +118,24 @@ h2 {
   margin-right: 5%;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .rules2 {
-  margin-top: 5%;
+  margin-top: 1%;
   margin-right: 5%;
+  margin-left: 2%;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 2%;
   border-bottom: 1px solid #efefef;
-  margin-top: 32px;
+  margin-top: 3%;
 }
 
 .nav-links {
@@ -186,7 +180,9 @@ a:active {
     justify-content: space-around;
     padding: 1%;
     color: white;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 8%;
+    margin-top: 2%;
   }
   .buttons {
     margin: 0 auto;
@@ -208,8 +204,8 @@ a:active {
   .grid {
     margin-top: 5%;
     padding: 2%;
-    margin-left: 10%;
-    margin-right: 14%;
+    margin-left: 11%;
+    margin-right: 20%;
   }
   .rules2 {
     margin-top: 1%;
@@ -225,7 +221,7 @@ a:active {
     display: flex;
     width: 100%;
     flex-direction: column;
-    margin: 5%;
+    margin: 2%;
   }
   .preset {
     display: flex;
@@ -250,10 +246,9 @@ a:active {
     border-radius: 4px;
   }
   .grid {
-    width: 100%;
     margin-top: 1%;
-    margin-left: 5%;
-    margin-right: 0;
+    margin-left: 1%;
+    margin-right: 2%;
   }
   .rules2 {
     margin-top: 1%;

@@ -26,6 +26,49 @@ const blinker = [
   { row: 8, col: 21 },
   { row: 8, col: 22 },
 ];
+const gliderGun = [
+  { row: 1, col: 1 },
+  { row: 1, col: 2 },
+  { row: 2, col: 1 },
+  { row: 2, col: 2 },
+
+  { row: 4, col: 5 },
+  { row: 4, col: 6 },
+
+  { row: 5, col: 5 },
+  { row: 5, col: 6 },
+  { row: 2, col: 8 },
+  { row: 1, col: 8 },
+  { row: 1, col: 9 },
+  { row: 2, col: 9 },
+  { row: 13, col: 22 },
+  { row: 13, col: 23 },
+  { row: 14, col: 22 },
+  { row: 14, col: 23 },
+  { row: 13, col: 19 },
+  { row: 12, col: 18 },
+
+  { row: 14, col: 18 },
+  { row: 15, col: 17 },
+  { row: 11, col: 17 },
+  { row: 11, col: 16 },
+  { row: 11, col: 14 },
+  { row: 11, col: 13 },
+
+  { row: 12, col: 12 },
+  { row: 13, col: 12 },
+  { row: 14, col: 12 },
+  { row: 14, col: 13 },
+  { row: 14, col: 14 },
+  { row: 23, col: 14 },
+
+  { row: 22, col: 14 },
+  { row: 22, col: 13 },
+  { row: 22, col: 12 },
+  { row: 21, col: 11 },
+  { row: 20, col: 11 },
+  { row: 20, col: 12 },
+];
 
 const PresetButtons = ({
   running,
@@ -47,6 +90,13 @@ const PresetButtons = ({
         }}
       >
         Preset Pattern
+      </button>
+      <button
+        onClick={() => {
+          generatePreset(gliderGun, setGrid, setGen);
+        }}
+      >
+        Simkin glider gun
       </button>
       <button onClick={() => manualSimulation()}>Next Generation</button>
       <button
