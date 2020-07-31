@@ -12,10 +12,11 @@ Each round of the simulation examines the current state of the grid, and then pr
 
 CAs have been used in biological and chemical simulations and other areas of research, such as CA-based computer processors, and other numeric techniques.
 
-**This project was created using RCA, Javascript, React Router, immer library and CSS.**
-
-## General Rules:
 ---
+**This project was created using RCA, Javascript, React Router, immer library and CSS.**
+---
+## General Rules:
+
 
         1. A living cell will stay alive if 2 or 3 neighbours are alive.
         2. Dead cell will come alive if exactly 3 neighbours are living.
