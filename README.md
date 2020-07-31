@@ -37,3 +37,5 @@ CAs have been used in biological and chemical simulations and other areas of res
 * Player can clear the previous grid with the "Clear" button.     
 * Player can see the simulation one generation at a time by clicking on the "Next Generation" button.        
 * "Preset" button has a cell pattern that Player can activate and see how the patterns change but never die.
+
+![example-patterns](https://media.giphy.com/media/4VVZTvTqzRR0BUwNIH/giphy.gif)
