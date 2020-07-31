@@ -6,9 +6,10 @@
 }
 
 * {
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url("starts.jpg");
 }
 html {
   font-size: 62.5%;
@@ -32,12 +33,6 @@ code {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -49,23 +44,17 @@ code {
   color: white;
 }
 
-a {
-  color: #61dafb;
-  font-size: 2rem;
-}
-a:hover {
-  color: #a2272d;
-}
 button {
   display: inline-block;
   border: none;
-  padding: 1rem 2rem;
-  margin: 0;
+  padding: 1rem;
+  margin: 1%;
+  border-radius: 4px;
   text-decoration: none;
   background: #414141;
   color: #ffffff;
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
@@ -74,7 +63,7 @@ button {
 }
 button:hover,
 button:focus {
-  background: #a2272d;
+  background: #b73239;
 }
 
 button:focus {
@@ -100,7 +89,6 @@ button:active {
 .playButton,
 .clearButton {
   margin: 1rem;
-  border-radius: 4px;
 }
 h1,
 ul {
@@ -117,11 +105,13 @@ h2 {
 .grid {
   margin-top: 1%;
   margin-left: 5%;
-  box-shadow: 0px 0px 20px #a2272d;
+  box-shadow: 0px 0px 20px #b73239;
 }
 .components {
   display: flex;
   justify-content: space-around;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 .preset {
   display: flex;
@@ -144,4 +134,136 @@ h2 {
   text-align: justify;
   text-justify: inter-word;
   font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  margin-top: 32px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #61dafb;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 20%;
+}
+.nav-links a:last-of-type {
+  margin-right: 0;
+}
+
+a:hover {
+  color: #a2272d;
+}
+a:active {
+  color: #b73239;
+}
+
+@media (max-width: 800px) {
+  .components {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+
+    justify-content: center;
+  }
+  h2 {
+    float: left;
+    margin-left: 5%;
+    font-size: 1.3rem;
+  }
+  .preset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+    color: white;
+    margin-right: 5%;
+  }
+  .buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    display: flex;
+    size: 10%;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  .playButton,
+  .clearButton {
+    margin: 1rem;
+    border-radius: 4px;
+  }
+  .grid {
+    margin-top: 5%;
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 14%;
+  }
+  .rules2 {
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .components {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 5%;
+  }
+  .preset {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+    color: white;
+  }
+  .buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    display: flex;
+    font-size: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  .playButton,
+  .clearButton {
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  .grid {
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 0;
+  }
+  .rules2 {
+    margin-top: 1%;
+    margin-left: 5%;
+    text-align: justify;
+    font-size: 1rem;
+  }
+  h2 {
+    float: left;
+    margin-left: 1%;
+    font-size: 1rem;
+  }
 }

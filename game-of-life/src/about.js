@@ -6,39 +6,42 @@ const About = () => {
       <h1>Origins and Rules:</h1>
       <p>
         Motivated by questions in mathematical logic and in part by work on
-        simulation games by Ulam, among others, John Conway began doing
-        experiments in 1968 with a variety of different two-dimensional cellular
-        automaton rules. Conway's initial goal was to define an interesting and
-        unpredictable cell automaton. For example, he wanted some configurations
-        to last for a long time before dying and other configurations to go on
-        forever without allowing cycles. It was a significant challenge and an
-        open problem for years before experts on cellular automata managed to
-        prove that, indeed, the Game of Life admitted of a configuration which
-        was alive in the sense of satisfying Von Neumann's two general
-        requirements. While the definitions before the Game of Life were
-        proof-oriented, Conway's construction aimed at simplicity without a
-        priori providing proof the automaton was alive. Conway chose his rules
-        carefully, after considerable experimentation, to meet these criteria:
-        <li>There should be no explosive growth.</li>
-        <li>
-          {" "}
-          There should exist small initial patterns with chaotic, unpredictable
-          outcomes.
-        </li>
-        <li>
-          {" "}
-          There should be potential for von Neumann universal constructors.
-        </li>
-        <li>
-          {" "}
-          The rules should be as simple as possible, whilst adhering to the
-          above constraints{" "}
-        </li>
-        <p>
-          The game made its first public appearance in the October 1970 issue of
-          Scientific American, in Martin Gardner's "Mathematical Games" column.
-        </p>
+        simulation games, John Conway began doing experiments in 1968 with a
+        variety of different two-dimensional cellular automaton rules. Conway's
+        initial goal was to define an interesting and unpredictable cell
+        automaton. For example, he wanted some configurations to last for a long
+        time before dying and other configurations to go on forever without
+        allowing cycles. It was a significant challenge and an open problem for
+        years before experts on cellular automata managed to prove that, indeed,
+        the Game of Life admitted of a configuration which was alive in the
+        sense of satisfying Von Neumann's two general requirements. While the
+        definitions before the Game of Life were proof-oriented, Conway's
+        construction aimed at simplicity without a priori providing proof the
+        automaton was alive. Conway chose his rules carefully, after
+        considerable experimentation, to meet these criteria:
       </p>
+      <br></br>
+      <li>There should be no explosive growth.</li>
+      <li>
+        {" "}
+        There should exist small initial patterns with chaotic, unpredictable
+        outcomes.
+      </li>
+      <li>
+        {" "}
+        There should be potential for von Neumann universal constructors.
+      </li>
+      <li>
+        {" "}
+        The rules should be as simple as possible, whilst adhering to the above
+        constraints{" "}
+      </li>
+      <br />
+      <p>
+        The game made its first public appearance in the October 1970 issue of
+        Scientific American, in Martin Gardner's "Mathematical Games" column.
+      </p>
+
       <p>
         The universe of the Game of Life is an infinite, two-dimensional
         orthogonal grid of square cells, each of which is in one of two possible

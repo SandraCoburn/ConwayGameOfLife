@@ -1,15 +1,16 @@
 import React from "react";
 //used immer package to help with immutable state https://immerjs.github.io/immer/docs/introduction
 import produce from "immer";
+import { changeColor } from "./GameGrid.util";
 
-const Grid = ({ grid, setGrid, numCols, changeColor, gen, running }) => {
+const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
   return (
     <>
       <div
         className="grid"
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(${numCols}, 20px)`,
+          gridTemplateColumns: `repeat(${numCols}, 16px)`,
         }}
       >
         {grid.map((rows, index) =>
@@ -18,10 +19,12 @@ const Grid = ({ grid, setGrid, numCols, changeColor, gen, running }) => {
               key={`${index}-${idx}`}
               onClick={(e) => {
                 if (!running) {
+                  console.log("i clicked", index, idx);
                   const newGrid = produce(grid, (gridCopy) => {
                     gridCopy[index][idx] = grid[index][idx] ? 0 : 1;
                   });
                   setGrid(newGrid);
+                  console.log(grid);
                 } else {
                   e.preventDefault();
                 }

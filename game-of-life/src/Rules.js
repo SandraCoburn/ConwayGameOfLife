@@ -19,9 +19,9 @@ const Rules = () => {
       <br></br>
       <ul>
         <li>
-          Player can use the click on any cell to make a custom pattern then
-          click on the "Start" button to initiate a simulation. Click on Stop to
-          pause.
+          Player can click on any cell to make a custom pattern then click on
+          the "Start" button to initiate a simulation. Click on Stop to pause.
+          While running clicking on cells is disabled.
         </li>
         <li>
           Player can use the "Random" button to generate a random number of live
@@ -33,8 +33,12 @@ const Rules = () => {
         </li>
         <li>Player can clear the previous grid with the "Clear" button.</li>
         <li>
-          Player can see one generation at a time by clicking on the "Next
-          Generation" button.
+          Player can see the simulation one generation at a time by clicking on
+          the "Next Generation" button.
+        </li>
+        <li>
+          "Preset" button has a cell pattern that Player can activate and see
+          how the patterns change but never die.
         </li>
       </ul>
     </div>
