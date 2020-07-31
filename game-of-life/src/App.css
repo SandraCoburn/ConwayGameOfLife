@@ -47,7 +47,7 @@ code {
 button {
   display: inline-block;
   border: none;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1%;
   border-radius: 4px;
   text-decoration: none;
@@ -89,6 +89,7 @@ button:active {
 .playButton,
 .clearButton {
   margin: 1rem;
+  padding: 1rem;
 }
 h1,
 ul {
