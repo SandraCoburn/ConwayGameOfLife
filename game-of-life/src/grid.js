@@ -10,7 +10,7 @@ const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
         className="grid"
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(${numCols}, 16px)`,
+          gridTemplateColumns: `repeat(${numCols}, 18px)`,
         }}
       >
         {grid.map((rows, index) =>
@@ -24,7 +24,7 @@ const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
                     gridCopy[index][idx] = grid[index][idx] ? 0 : 1;
                   });
                   setGrid(newGrid);
-                  console.log(grid);
+                  //console.log(grid);
                 } else {
                   e.preventDefault();
                 }
@@ -34,7 +34,9 @@ const Grid = ({ grid, setGrid, numCols, gen, running, numRows }) => {
                 height: 16,
                 //background: grid[index][idx] ? "#a2272d" : undefined,
                 background: changeColor(grid[index][idx], gen),
-                border: "solid 1px white",
+                borderTop: "1px solid #dfdfdf",
+                borderLeft: "1px solid #dfdfdf",
+                gridGap: "0px",
               }}
             />
           ))

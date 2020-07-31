@@ -105,7 +105,7 @@ h2 {
 
 .grid {
   margin-top: 1%;
-  margin-left: 5%;
+  margin-left: 3%;
   box-shadow: 0px 0px 20px #b73239;
 }
 .components {
@@ -113,12 +113,14 @@ h2 {
   justify-content: space-around;
   margin-left: 5%;
   margin-top: 5%;
+  padding: 3%;
 }
 .preset {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 2%;
+  margin-left: 2%;
   color: white;
 }
 .rules {
@@ -127,14 +129,15 @@ h2 {
   margin-right: 5%;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .rules2 {
-  margin-top: 5%;
+  margin-top: 1%;
   margin-right: 5%;
+  margin-left: 2%;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 nav {
@@ -209,8 +212,8 @@ a:active {
   .grid {
     margin-top: 5%;
     padding: 2%;
-    margin-left: 10%;
-    margin-right: 14%;
+    margin-left: 14%;
+    margin-right: 20%;
   }
   .rules2 {
     margin-top: 1%;
@@ -226,7 +229,7 @@ a:active {
     display: flex;
     width: 100%;
     flex-direction: column;
-    margin: 5%;
+    margin: 2%;
   }
   .preset {
     display: flex;
@@ -251,10 +254,9 @@ a:active {
     border-radius: 4px;
   }
   .grid {
-    width: 100%;
     margin-top: 1%;
-    margin-left: 5%;
-    margin-right: 0;
+    margin-left: 1%;
+    margin-right: 2%;
   }
   .rules2 {
     margin-top: 1%;
