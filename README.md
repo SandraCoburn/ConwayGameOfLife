@@ -3,7 +3,7 @@
 <br>
 This project was created using RCA, Javascript, React Router, immer library and CSS.
 
-##Rules:
+## Rules:
 <br>
 
         1. A living cell will stay alive if 2 or 3 neighbours are alive.</li>
