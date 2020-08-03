@@ -1,5 +1,6 @@
 # Conway's Game Of Life
 Lambda School Computer Science Build Week 1.
+<br>
 Deployed site: https://cowgameoflife.netlify.app/
 
 ---
