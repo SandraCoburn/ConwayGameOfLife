@@ -16,7 +16,7 @@ Each round of the simulation examines the current state of the grid, and then pr
 CAs have been used in biological and chemical simulations and other areas of research, such as CA-based computer processors, and other numeric techniques.
 
 ---
-**This project was created using RCA, Javascript, React Router, immer library and CSS.**
+**This project was created using CRA, Javascript, React Router, immer library and CSS.**
 ---
 ## General Rules:
 
